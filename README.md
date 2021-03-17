@@ -11,10 +11,15 @@ Nullable string.
 
 Marshals to JSON null if SQL source data is null. Zero (blank) input will not produce a null String.
 
-#### nullable.Int
+#### nullable.Int64
 Nullable int64. 
 
-Marshals to JSON null if SQL source data is null. Zero input will not produce a null Int.
+Marshals to JSON null if SQL source data is null. Zero input will not produce a null Int64.
+
+#### nullable.Int32
+Nullable int32.
+
+Marshals to JSON null if SQL source data is null. Zero input will not produce a null Int32.
 
 #### nullable.Float
 Nullable float64. 
