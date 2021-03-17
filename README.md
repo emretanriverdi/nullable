@@ -1,16 +1,8 @@
-## null [![GoDoc](https://godoc.org/github.com/guregu/null?status.svg)](https://godoc.org/github.com/guregu/null) [![CircleCI](https://circleci.com/gh/guregu/null.svg?style=svg)](https://circleci.com/gh/guregu/null)
-`import "gopkg.in/guregu/null.v4"`
+nullable is a library with reasonable options for dealing with nullable SQL and JSON values
 
-null is a library with reasonable options for dealing with nullable SQL and JSON values
+Types in `nullable` will only be considered null on null input, and will JSON encode to `null`. If you need zero and null be considered separate values, use these.
 
-Types in `null` will only be considered null on null input, and will JSON encode to `null`. If you need zero and null be considered separate values, use these.
-
-All types implement `sql.Scanner` and `driver.Valuer`, so you can use this library in place of `sql.NullXXX`.
-All types also implement: `encoding.TextMarshaler`, `encoding.TextUnmarshaler`, `json.Marshaler`, and `json.Unmarshaler`. A null object's `MarshalText` will return a blank string.
-
-### null package
-
-`import "gopkg.in/guregu/null.v4"`
+All types implement: `encoding.TextMarshaler`, `encoding.TextUnmarshaler`, `json.Marshaler`, and `json.Unmarshaler`. A null object's `MarshalText` will return a blank string.
 
 #### null.String
 Nullable string.
