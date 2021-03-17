@@ -8,7 +8,6 @@ import (
 
 var (
 	boolJSON     = []byte(`true`)
-	falseJSON    = []byte(`false`)
 	nullBoolJSON = []byte(`{"Bool":true,"Valid":true}`)
 )
 
@@ -50,7 +49,7 @@ func TestUnmarshalBool(t *testing.T) {
 	assertNullBool(t, null, "null json")
 
 	var badType Bool
-	err = json.Unmarshal(intJSON, &badType)
+	err = json.Unmarshal(int32JSON, &badType)
 	if err == nil {
 		panic("err should not be nil")
 	}
